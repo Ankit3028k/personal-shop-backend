@@ -27,10 +27,10 @@ const ordersRoutes = require('./routes/orders');
 
 const api = process.env.API_URL;
 
-app.use(${api}/categories, categoriesRoutes);
-app.use(${api}/products, productsRoutes);
-app.use(${api}/users, usersRoutes);
-app.use(${api}/orders, ordersRoutes);
+app.use(`${api}/categories`, categoriesRoutes);
+app.use(`${api}/products`, productsRoutes);
+app.use(`${api}/users`, usersRoutes);
+app.use(`${api}/orders`, ordersRoutes);
 
 //Database
 //Database
@@ -50,4 +50,4 @@ mongoose.connect(process.env.CONNECTION_STRING, {
 app.listen(3001, ()=>{ 
 
     console.log('server is running http://localhost:3001');
-})
+}) 
