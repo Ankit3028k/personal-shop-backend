@@ -289,7 +289,8 @@ router.post('/', uploadOptions.single('image'), async (req, res) => {
     console.log(req.body);  // Log the form data
     console.log(req.file);  // Log the uploaded file
     const fileName = file.filename;
-    const basePath = `${req.protocol}://github.com/Ankit3028k/personal-shop-backend/tree/main//public/uploads/`;
+    const basePath = `${req.protocol}://${req.get('host')}/public/uploads/`;
+    //const basePath = `${req.protocol}://github.com/Ankit3028k/personal-shop-backend/tree/main//public/uploads/`;
 
     let product = new Product({
         name: req.body.name, 
