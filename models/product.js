@@ -28,16 +28,7 @@ const productSchema = mongoose.Schema({
         type: Number,
         default:0
     },
-    discounted_price: { 
-        type: Number,
-        default: 0,
-        required: true
-    },
-    quantity_threshold: { 
-        type: Number,
-        default: 0,
-        required: true
-    },
+
     category: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Category',
